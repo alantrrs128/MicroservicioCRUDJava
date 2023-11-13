@@ -33,7 +33,11 @@ public class UsuarioService implements IUsuarioService {
     }
 
     @Override
-    public void update(Long id, String nombre, String apellido, String email) {
-        usuarioRepository.update(id, nombre, apellido, email);
+    public void update(Usuario usuario, Long id) {
+        Usuario user = usuarioRepository.findById(id).orElseThrow();
+        user.setNombre(usuario.getNombre());
+        user.setApellido(usuario.getApellido());
+        user.setEmail(usuario.getEmail());
+        usuarioRepository.save(user);
     }
 }

@@ -9,5 +9,5 @@ public interface IUsuarioService {
     Usuario findById(Long id);
     void save(Usuario usuario);
     void deleteById(Long id);
-    void update(Long id, String nombre, String apellido, String email);
+    void update(Usuario usuario, Long id);
 }

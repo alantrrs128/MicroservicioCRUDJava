@@ -36,6 +36,6 @@ public class UsuarioController {
 
     @PutMapping("/modificar/{id}")
     public void updateUsuario(@RequestBody Usuario usuario,@PathVariable Long id) {
-        usuarioService.update(id, usuario.getNombre(), usuario.getApellido(), usuario.getEmail());
+        usuarioService.update(usuario, id);
     }
 }
