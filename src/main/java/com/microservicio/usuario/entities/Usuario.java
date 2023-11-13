@@ -4,6 +4,11 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
+/**
+ * Modelo de Usuario
+ * @author: Alan Torres Lomeli
+ * @version: 13/11/2023
+ */
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
