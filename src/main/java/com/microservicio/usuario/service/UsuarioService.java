@@ -38,6 +38,7 @@ public class UsuarioService implements IUsuarioService {
         user.setNombre(usuario.getNombre());
         user.setApellido(usuario.getApellido());
         user.setEmail(usuario.getEmail());
+        user.setFechaNacimiento(usuario.getFechaNacimiento());
         usuarioRepository.save(user);
     }
 }

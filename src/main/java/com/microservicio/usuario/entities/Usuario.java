@@ -2,6 +2,8 @@ package com.microservicio.usuario.entities;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "usuarios")
 public class Usuario {
@@ -11,6 +13,8 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private String email;
+    @Column(name = "fecha_nacimiento")
+    private LocalDateTime fechaNacimiento;
 
     public Long getId() {
         return id;
@@ -42,5 +46,13 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public LocalDateTime getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 }
